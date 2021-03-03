@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <!--android:adjustViewBounds="true"
+        Set this to true if you want the ImageView to adjust
+        its bounds to preserve the aspect ratio of its drawable.-->
+    <ImageView
+        android:id="@+id/card_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/header"
+        android:adjustViewBounds="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_baseline_star_border_24"
+        />
+    <TextView
+        android:id="@+id/feed_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/feed_desc"
+        android:text="FEED 的标题"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        />
+    <TextView
+        android:id="@+id/feed_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Youtube-Google Developer 1w read 100 like 1/13-22:18"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

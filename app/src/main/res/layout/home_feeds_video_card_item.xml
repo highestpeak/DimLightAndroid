@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/around_four_radius"
+    >
+    <!--采用 youtube card 样式-->
+    <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+        android:id="@+id/video_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/test_video_preview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:siShape="@drawable/up_two_radius"
+        app:siSquare="true"
+        tools:ignore="ContentDescription,HardcodedText"
+        />
+    <!--<ImageView-->
+    <!--    android:id="@+id/video_preview"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:adjustViewBounds="true"-->
+    <!--    android:src="@drawable/test_video_preview"-->
+    <!--    app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--    app:layout_constraintTop_toTopOf="parent"-->
+    <!--    tools:ignore="ContentDescription,HardcodedText"-->
+    <!--    android:background="@drawable/up_two_radius"-->
+    <!--    />-->
+
+    <!--todo:一个问题是当视频预览图片是白底的时候，白色文字就看不到了-->
+    <TextView
+        android:id="@+id/video_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="83万播放 2749评论"
+        app:layout_constraintBottom_toBottomOf="@id/video_preview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="2dp"
+        />
+
+    <TextView
+        android:id="@+id/video_length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="1:20:10"
+        app:layout_constraintBottom_toBottomOf="@id/video_preview"
+        app:layout_constraintRight_toRightOf="@id/video_preview"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        />
+
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+    <!--    android:id="@+id/video_source"-->
+    <!--    android:layout_width="40dp"-->
+    <!--    android:layout_height="40dp"-->
+    <!--    android:layout_marginStart="10dp"-->
+    <!--    android:layout_marginTop="20dp"-->
+    <!--    android:src="@drawable/my_profile"-->
+    <!--    app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--    app:layout_constraintTop_toBottomOf="@+id/video_preview"-->
+    <!--    />-->
+
+    <TextView
+        android:id="@+id/video_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="2000年8月15日巅峰对决-江泽民主席与华莱士谈笑风生"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="normal"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_preview"
+        />
+
+    <TextView
+        android:id="@+id/video_extra_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/video_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="2dp"
+        android:text="David Chen 1年前"
+        android:ellipsize="end"
+        android:maxLines="2"
+        />
+
+    <!--这个按钮更换为竖向三个点-->
+    <ImageView
+        android:id="@+id/item_menu"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/ic_baseline_navigate_next_24"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DimLight</string>
+
+    <string name="home_page">首页</string>
+    <string name="home_toolbar_view_change">视图</string>
+    <string name="home_toolbar_search">搜索</string>
 </resources>

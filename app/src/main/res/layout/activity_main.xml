@@ -6,13 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/home_feed_toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@color/black"
+        tools:ignore="MissingConstraints">
 
+    </com.google.android.material.appbar.MaterialToolbar>
+    <com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout
+        android:id="@+id/feed_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/md_blue_grey_200"
+        app:layout_constraintTop_toBottomOf="@id/home_feed_toolbar"
+        >
+    </com.donkingliang.consecutivescroller.ConsecutiveScrollerLayout>
+    <!--<androidx.recyclerview.widget.RecyclerView-->
+    <!--    android:id="@+id/home_feed_recycler_view"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="0dp"-->
+    <!--    android:scrollbars="vertical"-->
+    <!--    app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--    app:layout_constraintEnd_toEndOf="parent"-->
+    <!--    app:layout_constraintStart_toStartOf="parent"-->
+    <!--    app:layout_constraintTop_toBottomOf="@id/home_feed_toolbar"-->
+    <!--    tools:ignore="MissingConstraints" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
